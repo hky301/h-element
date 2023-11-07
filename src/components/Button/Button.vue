@@ -14,7 +14,7 @@
       <slot />
     </span>
   </button>
-</template>2
+</template>
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { ButtonProps } from './types'
