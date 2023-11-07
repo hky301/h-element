@@ -10,10 +10,10 @@
     "UI",
     "Vue3"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/hky301/h-element/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vikingmute/v-element/"
+    "url": "https://github.com/hky301/h-element/"
   },
   "files": [
     "dist"
