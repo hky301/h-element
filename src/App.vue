@@ -13,7 +13,7 @@ const close = () => {
 <template>
   <main>
     <Button ref="buttonRef" @click="open">Test Button</Button>
-    <v-button round>Round Button</v-button>
+    <!-- <h-button round>Round Button</h-button> -->
     <Button plain @click="close">Plain Button</Button>
     <Button round>Round Button</Button>
     <Button circle>VK</Button>
