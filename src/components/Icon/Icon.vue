@@ -9,7 +9,7 @@ import { omit } from 'lodash-es'
 import type { IconProps } from './types'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 defineOptions({
-  name: 'VkIcon',
+  name: 'HIcon',
   inheritAttrs: false
 })
 const props = defineProps<IconProps>()

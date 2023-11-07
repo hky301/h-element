@@ -21,7 +21,7 @@ import type { ButtonProps } from './types'
 import Icon from '../Icon/Icon.vue'
 import { buttonProps } from './types'
 defineOptions({
-  name: 'VkButton'
+  name: 'HButton'
 })
 
 withDefaults(defineProps<ButtonProps>(), {
