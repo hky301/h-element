@@ -16,7 +16,7 @@ npm install @hekaiyu/element --save
 // 引入所有组件
 import HElement from '@hekaiyu/element'
 // 引入样式
-import '@hekaiyu/element/dist/style.css'
+import '@hekaiyu/element/dist/index.css'
 
 import App from './App.vue'
 // 全局使用
