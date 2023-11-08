@@ -11,7 +11,7 @@ import Icon from '@/components/Icon'
 // import Input from '@/components/Input'
 // import Select from '@/components/Select'
 // import Switch from '@/components/Switch'
-// import Tooltip from '@/components/Tooltip'
+import Tooltip from '@/components/Tooltip'
 
 import './styles/index.css'
 
@@ -29,7 +29,7 @@ const components = [
   // Input,
   // Select,
   // Switch,
-  // Tooltip
+  Tooltip
 ]
 
 const install = (app: App) => {
@@ -51,7 +51,7 @@ export {
   // Input,
   // Select,
   // Switch,
-  // Tooltip,
+  Tooltip,
   // createMessage,
   // closeMessageAll
 }

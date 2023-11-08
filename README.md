@@ -2,13 +2,11 @@
 
 ### 安装
 
-
 ```bash
 npm install @hekaiyu/element --save
 ```
 
-### 开始使用
-
+### 使用方法
 
 **全局使用**
 
@@ -55,13 +53,19 @@ createApp(App).use(HElement).mount('#app')
 
 H-Element 提供了基于 ES Module 的开箱即用的 Tree Shaking 功能。
 
+在 main.ts (使用ts开发) 或者 main.js，写入以下代码
+
+```js
+// 引入样式
+import '@hekaiyu/element/dist/index.css'
+```
 
 ```vue
 <template>
   <Button>我是 HButton</Button>
 </template>
 <script>
-  import { Button } from ' @hekaiyu/element'
+  import { Button } from '@hekaiyu/element'
   export default {
     components: { Button },
   }
