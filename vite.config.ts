@@ -7,12 +7,17 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import dts from 'vite-plugin-dts'
+import VueMacros from 'unplugin-vue-macros'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
-    vueJsx(),
+    VueMacros.vite({
+      plugins: {
+        vue: vue(),
+        vueJsx: vueJsx(),
+      },
+    }),
     dts({
       tsconfigPath: './tsconfig.build.json'
     })
