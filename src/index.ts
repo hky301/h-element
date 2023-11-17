@@ -10,7 +10,7 @@ import Icon from '@/components/Icon'
 import Message, { createMessage, closeAll as closeMessageAll } from '@/components/Message'
 import Input from '@/components/Input'
 // import Select from '@/components/Select'
-// import Switch from '@/components/Switch'
+import Switch from '@/components/Switch'
 import Tooltip from '@/components/Tooltip'
 
 import './styles/index.css'
@@ -28,7 +28,7 @@ const components = [
   Message,
   Input,
   // Select,
-  // Switch,
+  Switch,
   Tooltip
 ]
 
@@ -50,7 +50,7 @@ export {
   Message,
   Input,
   // Select,
-  // Switch,
+  Switch,
   Tooltip,
   createMessage,
   closeMessageAll
