@@ -9,7 +9,7 @@ import Dropdown from '@/components/Dropdown'
 import Icon from '@/components/Icon'
 import Message, { createMessage, closeAll as closeMessageAll } from '@/components/Message'
 import Input from '@/components/Input'
-// import Select from '@/components/Select'
+import Select from '@/components/Select'
 import Switch from '@/components/Switch'
 import Tooltip from '@/components/Tooltip'
 
@@ -27,7 +27,7 @@ const components = [
   Icon,
   Message,
   Input,
-  // Select,
+  Select,
   Switch,
   Tooltip
 ]
@@ -49,7 +49,7 @@ export {
   Icon,
   Message,
   Input,
-  // Select,
+  Select,
   Switch,
   Tooltip,
   createMessage,
