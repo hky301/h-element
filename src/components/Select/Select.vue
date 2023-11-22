@@ -49,7 +49,7 @@ const findOption = (value: string) => {
   return option ? option : null
 }
 defineOptions({
-  name: 'VkSelect'
+  name: 'HSelect'
 })
 const props = withDefaults(defineProps<SelectProps>(), {
   options: () => []

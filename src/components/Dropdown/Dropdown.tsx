@@ -5,7 +5,7 @@ import type { MenuOption } from './types'
 import Tooltip from '../Tooltip/Tooltip.vue'
 import type { TooltipInstance } from '../Tooltip/types'
 export default defineComponent({
-  name: 'VkDropdown',
+  name: 'HDropdown',
   props: {
     placement: {
       type: String as PropType<Placement>,
@@ -54,20 +54,20 @@ export default defineComponent({
         tooltipRef.value?.hide()
       }
     }
-    const visibleChange = (e:boolean) => {
+    const visibleChange = (e: boolean) => {
       emit('visible-change', e)
     }
     const options = computed(() => {
       return props.menuOptions.map(item => {
         return (
           <Fragment key={item.key}>
-            { item.divided ? <li role="separator" class="divided-placeholder"/> : '' }
-            <li 
-              class={{'vk-dropdown__item': true, 'is-disabled': item.disabled, 'is-divided': item.divided }}
+            {item.divided ? <li role="separator" class="divided-placeholder" /> : ''}
+            <li
+              class={{ 'vk-dropdown__item': true, 'is-disabled': item.disabled, 'is-divided': item.divided }}
               id={`dropdown-item-${item.key}`}
               onClick={() => itemClick(item)}
             >
-              { item.label }
+              {item.label}
             </li>
           </Fragment>
         )
@@ -81,8 +81,8 @@ export default defineComponent({
       <div
         class="vk-dropdown"
       >
-        <Tooltip 
-          trigger={props.trigger} 
+        <Tooltip
+          trigger={props.trigger}
           placement={props.placement}
           popperOptions={props.popperOptions}
           openDelay={props.openDelay}
@@ -95,7 +95,7 @@ export default defineComponent({
             default: () => slots.default && slots.default(),
             content: () => (
               <ul class="vk-dropdown__menu">
-                { options.value }
+                {options.value}
               </ul>
             )
           }}

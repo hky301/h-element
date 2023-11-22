@@ -55,7 +55,7 @@ import Icon from '../Icon/Icon.vue'
 import { formItemContextKey } from '../Form/types'
 
 defineOptions({
-  name: 'VkInput',
+  name: 'HInput',
   inheritAttrs: false
 })
 const props = withDefaults(defineProps<InputProps>(), { type: 'text', autocomplete: 'off' })

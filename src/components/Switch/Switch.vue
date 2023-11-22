@@ -23,7 +23,7 @@ import { ref, computed, onMounted, watch } from 'vue'
 import type { SwitchProps, SwitchEmits } from './types'
 
 defineOptions({
-  name: 'VkSwitch',
+  name: 'HSwitch',
   inheritAttrs: false
 })
 const props = withDefaults(defineProps<SwitchProps>(), {

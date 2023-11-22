@@ -1,22 +1,19 @@
 <template>
-  <div 
-    class="vk-form-item"
-    :class="{
-      'is-error': validateStatus.state === 'error',
-      'is-success': validateStatus.state === 'success',
-      'is-loading': validateStatus.loading,
-      'is-required': isRequired
-    }"
-  >
+  <div class="vk-form-item" :class="{
+    'is-error': validateStatus.state === 'error',
+    'is-success': validateStatus.state === 'success',
+    'is-loading': validateStatus.loading,
+    'is-required': isRequired
+  }">
     <label class="vk-form-item__label">
       <slot name="label" :label="label">
-        {{label}}
+        {{ label }}
       </slot>
     </label>
     <div class="vk-form-item__content">
-      <slot :validate="validate"/>
+      <slot :validate="validate" />
       <div class="vk-form-item__error-msg" v-if="validateStatus.state === 'error'">
-        {{validateStatus.errorMsg}}
+        {{ validateStatus.errorMsg }}
       </div>
     </div>
   </div>
@@ -28,7 +25,7 @@ import { isNil } from 'lodash-es'
 import { formContextKey, formItemContextKey } from './types'
 import type { FormItemProps, FormValidateFailure, FormItemContext, ValidateStatusProp, FormItemInstance } from './types'
 defineOptions({
-  name: 'VkFormItem'
+  name: 'HFormItem'
 })
 const props = defineProps<FormItemProps>()
 
@@ -104,7 +101,7 @@ const clearValidate = () => {
 const resetField = () => {
   clearValidate()
   const model = formContext?.model
-  if (model && props.prop && !isNil(model[props.prop])) { 
+  if (model && props.prop && !isNil(model[props.prop])) {
     model[props.prop] = initialValue
   }
 }
