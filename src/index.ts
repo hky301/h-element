@@ -5,7 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import Button from '@/components/Button'
 import Collapse, { CollapseItem } from '@/components/Collapse'
 import Dropdown from '@/components/Dropdown'
-// import Form, { FormItem } from '@/components/Form'
+import Form, { FormItem } from '@/components/Form'
 import Icon from '@/components/Icon'
 import Message, { createMessage, closeAll as closeMessageAll } from '@/components/Message'
 import Input from '@/components/Input'
@@ -22,8 +22,8 @@ const components = [
   Collapse,
   CollapseItem,
   Dropdown,
-  // Form,
-  // FormItem,
+  Form,
+  FormItem,
   Icon,
   Message,
   Input,
@@ -44,8 +44,8 @@ export {
   Collapse,
   CollapseItem,
   Dropdown,
-  // Form,
-  // FormItem,
+  Form,
+  FormItem,
   Icon,
   Message,
   Input,

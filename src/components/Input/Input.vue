@@ -52,7 +52,7 @@ import { ref, watch, computed, useAttrs, nextTick, inject } from 'vue'
 import type { Ref } from 'vue'
 import type { InputProps, InputEmits } from './types'
 import Icon from '../Icon/Icon.vue'
-// import { formItemContextKey} from '../Form/types'
+import { formItemContextKey } from '../Form/types'
 
 defineOptions({
   name: 'VkInput',
@@ -65,10 +65,10 @@ const innerValue = ref(props.modelValue)
 const isFocus = ref(false)
 const passwordVisible = ref(false)
 const inputRef = ref() as Ref<HTMLInputElement>
-// const formItemContext = inject(formItemContextKey)
-// const runValidation = (trigger?: string) => {
-//   formItemContext?.validate(trigger).catch((e) => console.log(e.errors))
-// }
+const formItemContext = inject(formItemContextKey)
+const runValidation = (trigger?: string) => {
+  formItemContext?.validate(trigger).catch((e) => console.log(e.errors))
+}
 const showClear = computed(() =>
   props.clearable &&
   !props.disabled &&
@@ -91,11 +91,11 @@ const keepFocus = async () => {
 const handleInput = () => {
   emits('update:modelValue', innerValue.value)
   emits('input', innerValue.value)
-  // runValidation('input')
+  runValidation('input')
 }
 const handleChange = () => {
   emits('change', innerValue.value)
-  // runValidation('change')
+  runValidation('change')
 }
 const handleFocus = (event: FocusEvent) => {
   isFocus.value = true
@@ -105,7 +105,7 @@ const handleBlur = (event: FocusEvent) => {
   console.log('blur triggered')
   isFocus.value = false
   emits('blur', event)
-  // runValidation('blur')
+  runValidation('blur')
 }
 const clear = () => {
   console.log('clear triggered')
